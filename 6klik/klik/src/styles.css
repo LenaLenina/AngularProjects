@@ -1,0 +1,33 @@
+html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.slider .slick-dots{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top:40%;
+    right: 10%;
+}
+
+.slick-dots li{
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 0;
+    display: block;
+}
+
+.slick-dots li button{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color:#fff;
+    display: block;
+    border: none;
+    text-indent: -9999px;
+}
+
+.slick-dots li.slick-active button{
+    background-color:#007dc3;
+}

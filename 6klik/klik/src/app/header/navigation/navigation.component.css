@@ -1,0 +1,54 @@
+.navigation{
+    padding: 20px 15px;
+}
+
+.navigation ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.navigation ul li{
+    display: inline-block;
+    margin: 0;
+    padding: 0 28px;
+}
+
+.navigation ul li:first-child{
+    padding-left: 0;
+}
+
+.navigation ul li:last-child{
+    padding-right: 0;
+}
+
+.navigation ul li.logo{
+    padding: 0 41px;
+}
+
+.navigation ul li a{
+    font-size: 14px;
+    color: #2a2a2a;
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 700;
+}
+
+.navigation ul li a:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #1a70af;
+    position: absolute;
+    right: -30px;
+    top: 6px;
+}
+
+.navigation ul li:nth-child(3) a:after,
+.navigation ul li.logo a:after,
+.navigation ul li:last-child a:after{
+    display: none;
+}
