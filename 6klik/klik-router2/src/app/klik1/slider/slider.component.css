@@ -1,0 +1,41 @@
+.btn-yellow{
+    background: #ffa200;
+    color: #fff;
+    border-radius: 16px;
+    padding: 6px 25px;
+}
+
+.btn-yellow:hover{
+    opacity: .8;
+}
+
+.slideitem{
+    position: relative;
+}
+
+.slideitem .caption{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 35%;
+}
+
+.slideitem .caption h2{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.slideitem .caption .bord{
+    width: 70px;
+    height: 2px;
+    background: #ffb400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.slideitem .caption p{
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 30px;
+}
