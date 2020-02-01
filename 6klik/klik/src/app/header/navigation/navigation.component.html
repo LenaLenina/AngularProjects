@@ -1,0 +1,15 @@
+<div class="navigation">
+    <div class=" row">
+        <ul>
+            <li *ngFor="let navObj of navigationBarNamesPart1">
+                <a [routerLink]="navObj.link">{{navObj.name}}</a>
+            </li>
+            <li class="logo">
+                <a routerLink="/homeklik"><img src="assets/img/logo.png"></a>
+            </li>
+            <li *ngFor="let navObj of navigationBarNamesPart2">
+                <a [routerLink]="navObj.link">{{navObj.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

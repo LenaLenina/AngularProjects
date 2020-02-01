@@ -1,0 +1,83 @@
+/*---------------------- Base --------------------------*/
+
+.yellow{
+    color: #ffa200;
+}
+
+.inline{
+    display: inline-block;
+}
+
+/*---------------------- Contacts --------------------------*/
+
+.contacts{
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.socials ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.socials ul li{
+    list-style-type: none;
+    margin: 0 5px;
+    padding: 0;
+    display: inline-block;
+}
+
+.socials ul li:first-child{
+    margin-left: 0;
+}
+
+.socials ul li:last-child{
+    margin-right: 0;
+}
+
+.socials ul li a:hover{
+    opacity: .8;
+    display: block;
+}
+
+.socials ul li img{
+    width: 37px;
+    height: 37px;
+    display: block;
+}
+
+.address{
+    padding: 3.5px 15px;
+}
+
+.address .fa{
+    font-size: 30px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.address span{
+    font-size: 14px;
+    color: #2a2a2a;
+    display: inline-block;
+    vertical-align: super;
+}
+
+.phone{
+    padding: 5px 15px;
+}
+
+.phone .fa{
+    font-size: 24px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.phone span{
+    font-size: 16px;
+    color: #2a2a2a;
+    display: inline-block;
+    vertical-align: super;
+}

@@ -1,0 +1,8 @@
+in terminal enter following commands:
+
+dpd create httplessons
+
+open created directory httplessons and enter command:
+
+dpd -p 5000
+dashboard

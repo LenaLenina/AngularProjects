@@ -1,0 +1,23 @@
+npm i bootstrap@next --save 
+or
+npm i bootstrap@3.3.7 --save
+
+or
+
+npm i -S tether // без нее обошелся
+npm i -S jquery
+npm i -S bootstrap@4.0.0-alpha.4 
+
+
+-------------------------------------------------------------------------------
+
+then in angular.json
+
+"styles": [
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
