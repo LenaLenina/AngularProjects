@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { APP_ROUTES_TO_SIDEBAR } from '../../common/constants/routes/app_routes';
+import { APP_ROUTES } from '../../common/constants/routes/app_routes';
 
 @Component({
   selector: 'app-rxjs-home',
@@ -8,12 +8,16 @@ import { APP_ROUTES_TO_SIDEBAR } from '../../common/constants/routes/app_routes'
 })
 export class RxjsHomeComponent implements OnInit {
 
-  sidebarItems = APP_ROUTES_TO_SIDEBAR;
+  sidebarItems;
 
   constructor() { }
 
   ngOnInit() {
-
+    this.sidebarItems = [
+      { name: APP_ROUTES.rxjs.name, url: '/' + APP_ROUTES.rxjs.url },
+      { name: APP_ROUTES.rxjs2.name, url: '/' + APP_ROUTES.rxjs2.url },
+      { name: APP_ROUTES.rxjs3.name, url: '/' + APP_ROUTES.rxjs3.url }
+    ]
   }
 
 }
