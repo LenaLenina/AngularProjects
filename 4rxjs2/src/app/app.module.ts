@@ -2,19 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RxjsComponent } from './rxjs/rxjs.component';
-import { RxjsCreateComponent } from './rxjs-create/rxjs-create.component';
-import { RxjsCreate2Component } from './rxjs-create2/rxjs-create2.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RXJS_COMPONENTS } from './common/constants/rxjs_components';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RxjsComponent,
-    RxjsCreateComponent,
-    RxjsCreate2Component
+    ...RXJS_COMPONENTS
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
