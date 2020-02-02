@@ -8,26 +8,22 @@ import { filter, debounceTime, delay, last, first, map, take } from 'rxjs/operat
   styleUrls: ['./rxjs-create.component.css']
 })
 export class RxjsCreateComponent implements AfterViewInit {
-  
 
   result: string = "";
-  stream: Observable<any>;
-  @ViewChild("btn2", {static: false}) createBtn: ElementRef;
+
+  @ViewChild("btn2", { static: false }) createBtn: ElementRef;
 
   constructor() { }
 
   ngAfterViewInit(): void {
-    this.stream = fromEvent(this.createBtn.nativeElement, "click");
+    let stream: Observable<any> = fromEvent(this.createBtn.nativeElement, "click");
 
-    this.stream.subscribe(x=>this.result += "1");
-  }
-
-  create() {
-    console.clear();
-    this.create8();
+    stream.subscribe(x => this.result += "1");
   }
 
   create1() {
+    console.clear();
+
     let o = from([1, 2, 3, 4, 5]);
 
     let s = o.pipe(filter(x => x % 2 == 0));
@@ -36,6 +32,8 @@ export class RxjsCreateComponent implements AfterViewInit {
   }
 
   create2() {
+    console.clear();
+
     let o = from([1, 2, 3, 4, 5]);
 
     let s: Observable<number>;
@@ -46,6 +44,8 @@ export class RxjsCreateComponent implements AfterViewInit {
   }
 
   create3() {
+    console.clear();
+
     from(["1", "2", 3, 4, 5])
       .pipe(delay(1000), filter(x => {
         if (typeof x === "number") {
@@ -59,6 +59,8 @@ export class RxjsCreateComponent implements AfterViewInit {
   }
 
   create4() {
+    console.clear();
+
     let o = of([1, 2, 3, 4, 5]);
 
     o.subscribe(y => from(y)
@@ -71,6 +73,7 @@ export class RxjsCreateComponent implements AfterViewInit {
   }
 
   create5() {
+    console.clear();
 
     let o = interval(500)
 
@@ -83,6 +86,8 @@ export class RxjsCreateComponent implements AfterViewInit {
   }
 
   create6() {
+    console.clear();
+    
     // let o = from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
     // let o2 = o.pipe(filter(x=>x%2 == 0), map(x=> x + "."));
@@ -95,6 +100,8 @@ export class RxjsCreateComponent implements AfterViewInit {
   }
 
   create7() {
+    console.clear();
+
     // let o = of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
 
     // let o2 = o.pipe(filter(x=>x%2 == 0), map(x=> x + "."));
@@ -107,6 +114,8 @@ export class RxjsCreateComponent implements AfterViewInit {
   }
 
   create8() {
+    console.clear();
+
     // let o = interval(100);
 
     // let o2 = o.pipe(take(20), filter(x => x % 2 == 0), map(x => x + "."));
