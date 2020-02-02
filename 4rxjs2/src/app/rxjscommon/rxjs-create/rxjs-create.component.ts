@@ -1,5 +1,5 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-import { Observable, from, of, interval, fromEvent } from 'rxjs';
+import { Component } from '@angular/core';
+import { Observable, from, of, interval } from 'rxjs';
 import { filter, debounceTime, delay, last, first, map, take } from 'rxjs/operators';
 
 @Component({
@@ -7,19 +7,7 @@ import { filter, debounceTime, delay, last, first, map, take } from 'rxjs/operat
   templateUrl: './rxjs-create.component.html',
   styleUrls: ['./rxjs-create.component.css']
 })
-export class RxjsCreateComponent implements AfterViewInit {
-
-  result: string = "";
-
-  @ViewChild("btn2", { static: false }) createBtn: ElementRef;
-
-  constructor() { }
-
-  ngAfterViewInit(): void {
-    let stream: Observable<any> = fromEvent(this.createBtn.nativeElement, "click");
-
-    stream.subscribe(x => this.result += "1");
-  }
+export class RxjsCreateComponent {
 
   create1() {
     console.clear();
@@ -87,7 +75,7 @@ export class RxjsCreateComponent implements AfterViewInit {
 
   create6() {
     console.clear();
-    
+
     // let o = from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
     // let o2 = o.pipe(filter(x=>x%2 == 0), map(x=> x + "."));
